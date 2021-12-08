@@ -25,7 +25,7 @@ title={<Text bold align="center">Demo Settings</Text>}>
 // dit is die toggle switch misschien komt deze later nog van pas
 <Toggle
 settingsKey="toggle"
-label="Toggle Switch"
+label="Reminder 1"
 />
 <ColorSelect
 settingsKey="color"
