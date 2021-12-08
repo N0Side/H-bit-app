@@ -1,7 +1,7 @@
 registerSettingsPage((/* { settings } */) => (
   <Page>
-    <Section title="Hi!">
-      <Text>Hello world!</Text>
+    <Section title="My reminders">
+      <Text>U don't have any reminders yet, press + to add one</Text>
     </Section>
     <Section title="Pick a letter">
       <Select
@@ -19,5 +19,25 @@ registerSettingsPage((/* { settings } */) => (
         ]}
       />
     </Section>
-  </Page>
+    // hieronder staat code voor die color switches
+    <Section
+title={<Text bold align="center">Demo Settings</Text>}>
+// dit is die toggle switch misschien komt deze later nog van pas
+<Toggle
+settingsKey="toggle"
+label="Toggle Switch"
+/>
+<ColorSelect
+settingsKey="color"
+colors={[
+{color: 'tomato'},
+{color: 'sandybrown'},
+{color: 'gold'},
+{color: 'aquamarine'},
+{color: 'deepskyblue'},
+{color: 'plum'}
+]}
+/>
+</Section>
+</Page>
 ));
