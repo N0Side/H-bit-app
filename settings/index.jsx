@@ -187,31 +187,8 @@ function renderMainPage(props) {
 
   return (
     <Page>
-      <Section title="Settings">
-        <Text>Hello world!</Text>
-        <Select settingsKey="letter" label="Default Letter" options={list} />
-      </Section>
-      <Section title="Simple item list">
-        <AdditiveList
-          title="A list with Autocomplete"
-          settingsKey="list"
-          maxItems="5"
-          addAction={
-            <TextInput
-              title="Add List Item"
-              label="➡️ Add item"
-              placeholder="Type something"
-              action="Add Item"
-              onAutocomplete={(value) =>
-                list.filter(
-                  (option) =>
-                    option.name.toLowerCase().indexOf(value.toLowerCase()) >= 0,
-                )
-              }
-            />
-          }
-        />
-      </Section>
+  
+
       <Section title="Complex items with multiple values">
         {items}
         <Button

@@ -3,7 +3,7 @@ import { outbox } from 'file-transfer';
 import { settingsStorage } from 'settings';
 import * as messaging from 'messaging';
 import { geolocation } from 'geolocation';
-import { API_KEY } from './keys';
+import { API_KEY } from './keys.example';
 
 /* Settings */
 function sendSettings() {
