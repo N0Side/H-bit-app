@@ -1,4 +1,4 @@
-node_modules
+/node_modules
 build
 .eslintcache
 companion/keys.js
