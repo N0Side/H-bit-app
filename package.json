@@ -26,7 +26,7 @@
     ],
     "i18n": {},
     "defaultLanguage": "en-US",
-    "appUUID": "30b0e667-9962-4b9c-9050-0ea0cad3d6a9"
+    "appUUID": "5811aa0b-fdd9-418c-b8c0-1c7ea89b63a9"
   },
   "scripts": {
     "build": "fitbit-build",

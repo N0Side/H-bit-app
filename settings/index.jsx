@@ -1,25 +1,22 @@
 const list = [
-  { name: 'Alpha', value: 'Alpha' },
-  { name: 'Beta', value: 'Beta' },
-  { name: 'Gamma', value: 'Gamma' },
-  { name: 'Delta', value: 'Delta' },
-  { name: 'Epsilon', value: 'Epsilon' },
-  { name: 'Wau', value: 'Wau' },
-  { name: 'Zèta', value: 'Zèta' },
-  { name: 'Jota', value: 'Jota' },
-  { name: 'Kappa', value: 'Kappa' },
-  { name: 'Lambda', value: 'Lambda' },
-  { name: 'Mu', value: 'Mu' },
-  { name: 'Pi', value: 'Pi' },
-  { name: 'Rho', value: 'Rho' },
-  { name: 'Sigma', value: 'Sigma' },
-  { name: 'Tau', value: 'Tau' },
-  { name: 'Phi', value: 'Phi' },
-  { name: 'Chi', value: 'Chi' },
-  { name: 'Psi', value: 'Psi' },
-  { name: 'Omega', value: 'Omega' },
+  { name: '😴', value: '😴' },
+  { name: '💊', value: '💊' },
+  { name: '🏃🏻', value: '🏃🏻' },
+  { name: '💪🏻', value: '💪🏻' },
+  { name: '🐶', value: '🐶' },
+  { name: '🍎', value: '🍎' },
+  { name: '💦', value: '💦' },
 ];
 
+const days = [
+  { name: 'Monday', value: 'Monday' },
+  { name: 'Tuesday', value: 'Tuesday' },
+  { name: 'Wednesday', value: 'Wednesday' },
+  { name: 'Thursday', value: 'Thursday' },
+  { name: 'Friday', value: 'Friday' },
+  { name: 'Saturday', value: 'Saturday' },
+  { name: 'Sunday', value: 'Sunday' },
+];
 const colors = [
   { color: '#DC143C' },
   { color: '#1B8900' },
@@ -34,7 +31,7 @@ const colors = [
 function renderEditPage(props) {
   return (
     <Page>
-      <Section title="Back">
+      <Section>
         <Button
           label="⏪ Back"
           onClick={() => {
@@ -50,7 +47,7 @@ function renderEditPage(props) {
         />
         <TextInput
           settingsKey="itemLetter"
-          label="Letter"
+          label="Icon"
           placeholder="Type something"
           onAutocomplete={(value) =>
             list.filter(
@@ -59,9 +56,26 @@ function renderEditPage(props) {
             )
           }
         />
-        <ColorSelect settingsKey="itemColor" colors={colors} />
+
+        <ColorSelect  title="Colour" settingsKey="itemColor" colors={colors} />
+
       </Section>
-      <Section title="Actions">
+      <Section title="Time">
+              <TextInput
+          settingsKey="itemDays"
+          label="Day"
+          placeholder="Type something"
+          onAutocomplete={(value) =>
+            days.filter(
+              (option) =>
+                option.name.toLowerCase().indexOf(value.toLowerCase()) >= 0,
+            )
+          }
+        />
+
+
+      </Section>
+      <Section >
         <Button
           label="✅ Save"
           onClick={() => {
@@ -182,14 +196,14 @@ function renderMainPage(props) {
       />
     ));
   } else {
-    items = <Text>Add your first item</Text>;
+    items = <Text>Start by creating your first reminder</Text>;
   }
 
   return (
     <Page>
-  
 
-      <Section title="Complex items with multiple values">
+
+      <Section title="Create a reminder">
         {items}
         <Button
           label="➡️ Add item"
