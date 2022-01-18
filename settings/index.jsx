@@ -9,13 +9,13 @@ const list = [
 ];
 
 const days = [
-  { name: 'Monday', value: 'Mon' },
-  { name: 'Tuesday', value: 'Tue' },
-  { name: 'Wednesday', value: 'Wed' },
-  { name: 'Thursday', value: 'Thu' },
-  { name: 'Friday', value: 'Fri' },
-  { name: 'Saturday', value: 'Sat' },
-  { name: 'Sunday', value: 'Sun' },
+  { name: 'Monday', value: '1' },
+  { name: 'Tuesday', value: '2' },
+  { name: 'Wednesday', value: '3' },
+  { name: 'Thursday', value: '4' },
+  { name: 'Friday', value: '5' },
+  { name: 'Saturday', value: '6' },
+  { name: 'Sunday', value: '7' },
 ];
 const colors = [
   { color: '#DC143C' },
