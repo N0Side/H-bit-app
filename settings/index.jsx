@@ -129,6 +129,7 @@ function renderEditPage(props) {
 
             // back to main page
             props.settingsStorage.setItem('itemAdding', 'false');
+
           }}
         />
         {props.settings.itemEditing !== 'false' && (
