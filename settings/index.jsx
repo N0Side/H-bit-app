@@ -9,13 +9,13 @@ const list = [
 ];
 
 const days = [
-  { name: 'Monday', value: 'Monday' },
-  { name: 'Tuesday', value: 'Tuesday' },
-  { name: 'Wednesday', value: 'Wednesday' },
-  { name: 'Thursday', value: 'Thursday' },
-  { name: 'Friday', value: 'Friday' },
-  { name: 'Saturday', value: 'Saturday' },
-  { name: 'Sunday', value: 'Sunday' },
+  { name: 'Monday', value: 'Mon' },
+  { name: 'Tuesday', value: 'Tue' },
+  { name: 'Wednesday', value: 'Wed' },
+  { name: 'Thursday', value: 'Thu' },
+  { name: 'Friday', value: 'Fri' },
+  { name: 'Saturday', value: 'Sat' },
+  { name: 'Sunday', value: 'Sun' },
 ];
 const colors = [
   { color: '#DC143C' },
@@ -59,7 +59,7 @@ function renderEditPage(props) {
         <ColorSelect  title="Colour" settingsKey="itemColor" colors={colors} />
 
       </Section>
-      <Section title="Time">
+      <Section title="When do you want to be reminded?">
               <TextInput
           settingsKey="itemDays"
           label="Day"
@@ -70,8 +70,28 @@ function renderEditPage(props) {
                 option.name.toLowerCase().indexOf(value.toLowerCase()) >= 0,
             )
           }
-        />
 
+        />
+        </Section>
+        <Section title="Time">
+        <Text> Hour:                   {props.settingsStorage.getItem('blah')}</Text>
+        <Slider
+          settingsKey="sliderHour"
+          min="0"
+          max="23"
+          step="1"
+          defaultValue="12"
+          onChange={value => props.settingsStorage.setItem('blah', value)}
+                        />
+        <Text> Minutes:                {props.settingsStorage.getItem('bleh')}</Text>
+        <Slider
+          settingsKey="sliderMinutes"
+          min="0"
+          max="60"
+          step="1"
+          defaultValue="30"
+          onChange={value => props.settingsStorage.setItem('bleh', value)}
+        />
 
       </Section>
       <Section >
