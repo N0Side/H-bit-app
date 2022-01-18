@@ -26,6 +26,7 @@ const colors = [
   { color: '#039898' },
 ];
 
+
 /* Edit Page (for complex list items) */
 function renderEditPage(props) {
   return (
@@ -74,24 +75,24 @@ function renderEditPage(props) {
         />
         </Section>
         <Section title="Time">
-        <Text> Hour:                   {props.settingsStorage.getItem('blah')}</Text>
-        <Slider
-          settingsKey="sliderHour"
-          min="0"
-          max="23"
-          step="1"
-          defaultValue="12"
-          onChange={value => props.settingsStorage.setItem('blah', value)}
-                        />
-        <Text> Minutes:                {props.settingsStorage.getItem('bleh')}</Text>
-        <Slider
-          settingsKey="sliderMinutes"
-          min="0"
-          max="60"
-          step="1"
-          defaultValue="30"
-          onChange={value => props.settingsStorage.setItem('bleh', value)}
-        />
+              <Text> Hour:                   {props.settingsStorage.getItem('hour')}</Text>
+      <Slider
+        settingsKey="sliderHour"
+        min="0"
+        max="23"
+        step="1"
+        defaultValue="12"
+        onChange={value => props.settingsStorage.setItem('hour', value)}
+                      />
+      <Text> Minutes:                {props.settingsStorage.getItem('minutes')}</Text>
+      <Slider
+        settingsKey="sliderMinutes"
+        min="0"
+        max="60"
+        step="1"
+        defaultValue="30"
+        onChange={value => props.settingsStorage.setItem('minutes', value)}
+            />
 
       </Section>
       <Section >
@@ -117,6 +118,8 @@ function renderEditPage(props) {
                 letter: props.settings.itemLetter,
                 color: props.settings.itemColor,
                 days: props.settings.itemDays,
+                hour: props.settings.sliderHour,
+                minutes: props.settings.sliderMinutes,
               };
 
               // add item
@@ -131,6 +134,8 @@ function renderEditPage(props) {
                 letter: props.settings.itemLetter,
                 color: props.settings.itemColor,
                 days: props.settings.itemDays,
+                hour: props.settings.sliderHour,
+                minutes: props.settings.sliderMinutes,
               };
 
               // find current item
@@ -209,6 +214,8 @@ function renderMainPage(props) {
           props.settingsStorage.setItem('itemLetter', item.letter);
           props.settingsStorage.setItem('itemColor', item.color);
           props.settingsStorage.setItem('itemDays', item.days);
+          props.settingsStorage.setItem('sliderHour', item.hour);
+          props.settingsStorage.setItem('sliderMinutes', item.min);
 
           // set itemAdding so we can switch views
           props.settingsStorage.setItem('itemAdding', 'true');

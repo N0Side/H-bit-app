@@ -13,6 +13,9 @@ function sendSettings() {
           name: item.name ? JSON.parse(item.name).name : '',
           letter: item.letter ? JSON.parse(item.letter).value : '',
           color: item.color ? JSON.parse(item.color) : '',
+          days: item.days ? JSON.parse(item.days).value : '',
+          hour: item.hour ? JSON.parse(item.hour).value : '',
+          minutes: item.minutes ? JSON.parse(item.minutes).value : '',
         }))
       : [],
     list: settingsStorage.getItem('list')
