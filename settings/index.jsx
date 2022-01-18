@@ -96,6 +96,7 @@ function renderEditPage(props) {
                 name: props.settings.itemName,
                 letter: props.settings.itemLetter,
                 color: props.settings.itemColor,
+                days: props.settings.itemDays,
               };
 
               // add item
@@ -109,6 +110,7 @@ function renderEditPage(props) {
                 name: props.settings.itemName,
                 letter: props.settings.itemLetter,
                 color: props.settings.itemColor,
+                days: props.settings.itemDays,
               };
 
               // find current item
@@ -185,6 +187,7 @@ function renderMainPage(props) {
           props.settingsStorage.setItem('itemName', item.name);
           props.settingsStorage.setItem('itemLetter', item.letter);
           props.settingsStorage.setItem('itemColor', item.color);
+          props.settingsStorage.setItem('itemDays', item.days);
 
           // set itemAdding so we can switch views
           props.settingsStorage.setItem('itemAdding', 'true');
@@ -211,6 +214,7 @@ function renderMainPage(props) {
             props.settingsStorage.setItem('itemName', '');
             props.settingsStorage.setItem('itemLetter', '');
             props.settingsStorage.setItem('itemColor', '');
+            props.settingsStorage.setItem('itemDays', '');
 
             // set itemAdding so we can switch views
             props.settingsStorage.setItem('itemAdding', 'true');

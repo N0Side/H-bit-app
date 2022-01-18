@@ -5,6 +5,7 @@ import * as messaging from 'messaging';
 const state = {
   items: [],
   list: [],
+  days: [],
   letter: '',
   companionTimestamp: 0,
   location: '',
