@@ -1,30 +1,10 @@
-import document from 'document';
-import { switchPage } from '../navigation';
+import clock from 'clock';
+import * as document from 'document';
 
-let $buttonDetail = null;
-let $buttonReplace = null;
+clock.granularity = 'seconds'; // seconds, minutes, hours
 
-function doSomething() {
-  console.log('hallo index');
-}
+const clockLabel = document.getElementById('clock-label');
 
-export function destroy() {
-  console.log('destroy index page');
-  $buttonDetail = null;
-  $buttonReplace = null;
-}
-
-export function init() {
-  console.log('init index page');
-  $buttonDetail = document.getElementById('detail-button');
-  $buttonReplace = document.getElementById('replace-button');
-
-  $buttonDetail.onclick = () => {
-    switchPage('detail', true);
-  };
-  $buttonReplace.onclick = () => {
-    switchPage('replace');
-  };
-
-  doSomething();
-}
+clock.addEventListener('tick', (evt) => {
+  clockLabel.text = evt.date.toTimeString().slice(0, -4);
+});
