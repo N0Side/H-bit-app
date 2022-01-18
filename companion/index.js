@@ -18,12 +18,6 @@ function sendSettings() {
           minutes: item.minutes ? JSON.parse(item.minutes).value : '',
         }))
       : [],
-    list: settingsStorage.getItem('list')
-      ? JSON.parse(settingsStorage.getItem('list')).map((item) => item.value)
-      : [],
-    letter: settingsStorage.getItem('letter')
-      ? JSON.parse(settingsStorage.getItem('letter')).values[0].value
-      : '',
   };
 
   outbox

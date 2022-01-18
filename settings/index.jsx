@@ -75,7 +75,7 @@ function renderEditPage(props) {
         />
         </Section>
         <Section title="Time">
-              <Text> Hour:                   {props.settingsStorage.getItem('hour')}</Text>
+              <Text> Hour:                   {props.settingsStorage.getItem('sliderHour')}</Text>
       <Slider
         settingsKey="sliderHour"
         min="0"
@@ -84,7 +84,7 @@ function renderEditPage(props) {
         defaultValue="12"
         onChange={value => props.settingsStorage.setItem('hour', value)}
                       />
-      <Text> Minutes:                {props.settingsStorage.getItem('minutes')}</Text>
+      <Text> Minutes:                {props.settingsStorage.getItem('sliderMinutes')}</Text>
       <Slider
         settingsKey="sliderMinutes"
         min="0"
@@ -215,7 +215,7 @@ function renderMainPage(props) {
           props.settingsStorage.setItem('itemColor', item.color);
           props.settingsStorage.setItem('itemDays', item.days);
           props.settingsStorage.setItem('sliderHour', item.hour);
-          props.settingsStorage.setItem('sliderMinutes', item.min);
+          props.settingsStorage.setItem('sliderMinutes', item.minutes);
 
           // set itemAdding so we can switch views
           props.settingsStorage.setItem('itemAdding', 'true');
@@ -243,6 +243,8 @@ function renderMainPage(props) {
             props.settingsStorage.setItem('itemLetter', '');
             props.settingsStorage.setItem('itemColor', '');
             props.settingsStorage.setItem('itemDays', '');
+            props.settingsStorage.setItem('sliderHour', '');
+            props.settingsStorage.setItem('sliderMinutes', '');
 
             // set itemAdding so we can switch views
             props.settingsStorage.setItem('itemAdding', 'true');
