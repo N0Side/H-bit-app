@@ -23,7 +23,6 @@ const colors = [
   { color: '#0146CD' },
   { color: '#FFA500' },
   { color: '#FF5C00' },
-  { color: '#C715AB' },
   { color: '#039898' },
 ];
 

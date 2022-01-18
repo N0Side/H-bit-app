@@ -1,5 +1,5 @@
 {
-  "name": "fitbit-full-example",
+  "name": "H-bit",
   "version": "0.1.0",
   "private": true,
   "license": "UNLICENSED",
@@ -16,7 +16,7 @@
   },
   "fitbit": {
     "appType": "app",
-    "appDisplayName": "Fitbit Full Example",
+    "appDisplayName": "H-bit",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [],
