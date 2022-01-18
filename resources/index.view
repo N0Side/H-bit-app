@@ -1,1 +1,9 @@
-<svg></svg>
+<svg viewport-fill="fb-cyan">
+  <text id="clock-label" x="50%" y="50%-20"
+      fill="black" font-size="80" font-family="System-Regular"
+      text-anchor="middle" text-length="20">00:00</text>
+
+      <text id="datum" x="50%" y="50%+30"
+          fill="black" font-size="32" font-family="System-Regular"
+          text-anchor="middle" text-length="10">Jan 15</text>
+</svg>
