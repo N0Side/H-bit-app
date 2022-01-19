@@ -1,6 +1,6 @@
 import clock from 'clock';
 import * as document from 'document';
-//import { vibration } from "haptics";
+//import { vibration } from "haptics"; //staat als comment want geeft error in commit
 //import * as settings from "settingsStorage"; // it is imported, but could not be resolved + compile failed
 
 clock.granularity = 'minutes'; // seconds, minutes, hours
@@ -30,7 +30,7 @@ clock.addEventListener('tick', (evt) => {
   datum.text = evt.date.toDateString();
 
   /*
-//function
+//deze functie zou ervoor moeten zorgen dat de kleuren en iconen van de reminders op het juiste moment worden weergegeven
 const items = settings.getItem('items')
 
 items.forEach((item, id) => {
@@ -48,8 +48,8 @@ if (item.days.value===date1.getUTCDay() && item.hour===chours && item.minutes===
 });
 */
 });
-
+// terug naar oude versie aka zelfde waarden als in index.view
 myRect.addEventListener('click', () => {
-  myRect.style.fill = 'cyan';
+  myRect.style.fill = 'darkcyan';
   icon.text = '';
 });
