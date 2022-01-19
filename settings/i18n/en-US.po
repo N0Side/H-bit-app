@@ -1,0 +1,68 @@
+msgid "save"
+msgstr "✅ Save"
+
+msgid "delete"
+msgstr "🗑 Delete"
+
+msgid "cancel"
+msgstr "❌ Cancel"
+
+msgid "back"
+msgstr "⏪ Back"
+
+msgid "item"
+msgstr "➡️ Add item"
+
+msgid "name"
+msgstr "Name"
+
+msgid "icon"
+msgstr "Icon"
+
+msgid "day"
+msgstr "Day"
+
+msgid "hour"
+msgstr "Hour"
+
+msgid "minutes"
+msgstr "Minute"
+
+msgid "when"
+msgstr "When do you want to be reminded?"
+
+msgid "type"
+msgstr "Type something"
+
+msgid "time"
+msgstr "Time"
+
+msgid "rem"
+msgstr "Create a reminder"
+
+msgid "begin"
+msgstr "Start by creating your first reminder"
+
+msgid "color"
+msgstr "Colour"
+
+msgid "mon"
+msgstr "Monday"
+
+msgid "tue"
+msgstr "Tuesday"
+
+msgid "wed"
+msgstr "Wednesday"
+
+msgid "thu"
+msgstr "Thursday"
+
+msgid "fri"
+msgstr "Friday"
+
+msgid "sat"
+msgstr "Saturday"
+
+msgid "sun"
+msgstr "Sunday"

@@ -1,0 +1,32 @@
+msgid "save"
+msgstr "✅ Opslaan"
+
+msgid "delete"
+msgstr "🗑 Verwijder"
+
+msgid "cancel"
+msgstr "❌ Annuleer"
+
+msgid "name"
+msgstr "Naam"
+
+msgid "icon"
+msgstr "Icoon"
+
+msgid "day"
+msgstr "Dag"
+
+msgid "hour"
+msgstr "Uur"
+
+msgid "minutes"
+msgstr "Minuut"
+
+msgid "when"
+msgstr "Wanneer wil je herinnerd worden?"
+
+msgid "type"
+msgstr "Typ iets"
+
+msgid "time"
+msgstr "Tijd"

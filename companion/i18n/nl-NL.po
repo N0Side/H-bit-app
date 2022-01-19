@@ -1,0 +1,2 @@
+msgid "save"
+msgstr "✅ Opslaan"

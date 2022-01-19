@@ -1,3 +1,4 @@
+import { gettext } from "i18n";
 const list = [
   { name: '😴', value: '😴' },
   { name: '💊', value: '💊' },
@@ -9,13 +10,13 @@ const list = [
 ];
 
 const days = [
-  { name: 'Monday', value: '1' },
-  { name: 'Tuesday', value: '2' },
-  { name: 'Wednesday', value: '3' },
-  { name: 'Thursday', value: '4' },
-  { name: 'Friday', value: '5' },
-  { name: 'Saturday', value: '6' },
-  { name: 'Sunday', value: '7' },
+  { name: gettext("mon"), value: '1' },
+  { name: gettext("tue"), value: '2' },
+  { name: gettext("wed"), value: '3' },
+  { name: gettext("thu"), value: '4' },
+  { name: gettext("fri"), value: '5' },
+  { name: gettext("sat"), value: '6' },
+  { name: gettext("sun"), value: '7' },
 ];
 const colors = [
   { color: '#DC143C' },
@@ -33,7 +34,7 @@ function renderEditPage(props) {
     <Page>
       <Section>
         <Button
-          label="⏪ Back"
+          label= {gettext("back")}
           onClick={() => {
             props.settingsStorage.setItem('itemAdding', 'false');
           }}
@@ -42,13 +43,13 @@ function renderEditPage(props) {
       <Section title="Details">
         <TextInput
           settingsKey="itemName"
-          label="Name"
+          label= {gettext("name")}
           placeholder="Type something"
         />
         <TextInput
           settingsKey="itemLetter"
-          label="Icon"
-          placeholder="Type something"
+          label= {gettext("icon")}
+          placeholder= {gettext("type")}
           onAutocomplete={(value) =>
             list.filter(
               (option) =>
@@ -57,14 +58,14 @@ function renderEditPage(props) {
           }
         />
 
-        <ColorSelect  title="Colour" settingsKey="itemColor" colors={colors} />
+        <ColorSelect  title= {gettext("color")} settingsKey="itemColor" colors={colors} />
 
       </Section>
-      <Section title="When do you want to be reminded?">
+      <Section title= {gettext("when")}>
               <TextInput
           settingsKey="itemDays"
-          label="Day"
-          placeholder="Type something"
+          label= {gettext("day")}
+          placeholder= {gettext("type")}
           onAutocomplete={(value) =>
             days.filter(
               (option) =>
@@ -74,8 +75,8 @@ function renderEditPage(props) {
 
         />
         </Section>
-        <Section title="Time">
-              <Text> Hour:                   {props.settingsStorage.getItem('sliderHour')}</Text>
+        <Section title= {gettext("time")}>
+              <Text> {gettext("hour")}:                   {props.settingsStorage.getItem('sliderHour')}</Text>
       <Slider
         settingsKey="sliderHour"
         min="0"
@@ -84,7 +85,7 @@ function renderEditPage(props) {
         defaultValue="12"
         onChange={value => props.settingsStorage.setItem('hour', value)}
                       />
-      <Text> Minutes:                {props.settingsStorage.getItem('sliderMinutes')}</Text>
+      <Text> {gettext("minutes")}:                {props.settingsStorage.getItem('sliderMinutes')}</Text>
       <Slider
         settingsKey="sliderMinutes"
         min="0"
@@ -97,7 +98,7 @@ function renderEditPage(props) {
       </Section>
       <Section >
         <Button
-          label="✅ Save"
+          label= {gettext("save")}
           onClick={() => {
             // get current item list
             let items = [];
@@ -159,7 +160,7 @@ function renderEditPage(props) {
         />
         {props.settings.itemEditing !== 'false' && (
           <Button
-            label="🗑 Delete"
+            label= {gettext("delete")}
             onClick={() => {
               // get current item list
               let items = [];
@@ -189,7 +190,7 @@ function renderEditPage(props) {
           />
         )}
         <Button
-          label="❌ Cancel"
+          label= {gettext("cancel")}
           onClick={() => {
             props.settingsStorage.setItem('itemAdding', 'false');
           }}
@@ -226,17 +227,17 @@ function renderMainPage(props) {
       />
     ));
   } else {
-    items = <Text>Start by creating your first reminder</Text>;
+    items = <Text>{gettext("begin")}</Text>;
   }
 
   return (
     <Page>
 
 
-      <Section title="Create a reminder">
+      <Section title= {gettext("rem")}>
         {items}
         <Button
-          label="➡️ Add item"
+          label= {gettext("item")}
           onClick={() => {
             // set default values
             props.settingsStorage.setItem('itemName', '');

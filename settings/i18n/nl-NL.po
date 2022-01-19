@@ -1,0 +1,68 @@
+msgid "save"
+msgstr "✅ Opslaan"
+
+msgid "delete"
+msgstr "🗑 Verwijder"
+
+msgid "cancel"
+msgstr "❌ Annuleer"
+
+msgid "back"
+msgstr "⏪ Terug"
+
+msgid "item"
+msgstr "➡️ Item toevoegen"
+
+msgid "name"
+msgstr "Naam"
+
+msgid "icon"
+msgstr "Icoon"
+
+msgid "day"
+msgstr "Dag"
+
+msgid "hour"
+msgstr "Uur"
+
+msgid "minutes"
+msgstr "Minuut"
+
+msgid "when"
+msgstr "Wanneer wil je herinnerd worden?"
+
+msgid "type"
+msgstr "Typ iets"
+
+msgid "time"
+msgstr "Tijd"
+
+msgid "rem"
+msgstr "Maak een herinnering"
+
+msgid "begin"
+msgstr "Begin bij het maken van je eerste herinnering"
+
+msgid "color"
+msgstr "Kleur"
+
+msgid "mon"
+msgstr "Maandag"
+
+msgid "tue"
+msgstr "Dinsdag"
+
+msgid "wed"
+msgstr "Woensdag"
+
+msgid "thu"
+msgstr "Donderdag"
+
+msgid "fri"
+msgstr "Vrijdag"
+
+msgid "sat"
+msgstr "Zaterdag"
+
+msgid "sun"
+msgstr "Zondag"
