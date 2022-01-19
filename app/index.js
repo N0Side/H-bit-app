@@ -1,48 +1,55 @@
 import clock from 'clock';
 import * as document from 'document';
+//import { vibration } from "haptics";
+//import * as settings from "settingsStorage"; // it is imported, but could not be resolved + compile failed
 
 clock.granularity = 'minutes'; // seconds, minutes, hours
 
 const clockLabel = document.getElementById('clock-label');
+const datum = document.getElementById('datum');
+const date1 = new Date();
+//const items = [];
+const myRect = document.getElementById('myRect');
+const icon = document.getElementById('icon');
+console.log(date1.getUTCDay());
 
 clock.addEventListener('tick', (evt) => {
-  let clockhours = evt.date.getHours();
-  let clockminutes = evt.date.getMinutes();
-  if (clockhours < 10) {
-    clockhours = '0' + clockhours;
+  var chours = evt.date.getHours();
+  var cminutes = evt.date.getMinutes();
+  if (chours < 10) {
+    var clockhours = '0' + chours;
+  } else {
+    clockhours = chours;
   }
-  if (clockminutes < 10) {
-    clockminutes = '0' + clockminutes;
+  if (cminutes < 10) {
+    var clockminutes = '0' + cminutes;
+  } else {
+    clockminutes = cminutes;
   }
   clockLabel.text = clockhours + ':' + clockminutes;
-});
+  datum.text = evt.date.toDateString();
 
-const datum = document.getElementById('datum');
+  /*
+//function
+const items = settings.getItem('items')
 
-clock.addEventListener('tick', (evt) => {
-  datum.text = evt.date;
-});
+items.forEach((item, id) => {
+if (item.days.value===date1.getUTCDay() && item.hour===chours && item.minutes===cminutes) {
+  //change color myRect
+    myRect.style.fill= color; // of item.color
 
-const date1 = new Date();
-console.log(date1.getUTCDay());
+  //Icon
+   icon.text= letter; // of item.letter
 
-/*
-let u=0;
-if (u>0) {
-  console.log(item.days.value(id[u]));
-  u++;
+  vibration.start("bump");
+
 }
-else {
-  console.log("oeche");
-}
+
 });
-
-const datum = document.getElementById('datum');
-
-clock.addEventListener('tick', (evt) => {
-datum.text = evt.date;
-});
-
-const date1= new Date;
-console.log(date1.getUTCDay());
 */
+});
+
+myRect.addEventListener('click', () => {
+  myRect.style.fill = 'cyan';
+  icon.text = '';
+});
